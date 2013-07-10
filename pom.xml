@@ -36,9 +36,9 @@
     </developers>
 
     <scm>
-        <connection>scm:https://vert-x@github.com/purplefox/vert.x</connection>
-        <developerConnection>scm:git@github.com:purplefox/vert.x.git</developerConnection>
-        <url>https://github.com/purplefox/vert.x</url>
+        <connection>scm:git:https://github.com/autosportlabs/vert.x.git</connection>
+        <developerConnection>scm:git:https://github.com/autosportlabs/vert.x.git</developerConnection>
+        <url>https://github.com/autosportlabs/vert.x</url>
     </scm>
 
     <properties>
