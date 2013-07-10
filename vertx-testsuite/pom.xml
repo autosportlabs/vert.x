@@ -103,6 +103,9 @@
             <testResource>
                 <directory>src/test/ruby_scripts</directory>
             </testResource>
+            <testResource>
+                <directory>../src/dist/conf</directory>
+            </testResource>
         </testResources>
 
         <plugins>
