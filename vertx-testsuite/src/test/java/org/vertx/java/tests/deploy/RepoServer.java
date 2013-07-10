@@ -18,7 +18,7 @@ public class RepoServer {
                 + "/mod.zip")) {
               System.out.println("HANDLING repo request");
               req.response.sendFile(webroot + "mod2.zip");
-            } else if (req.uri.equals("http://vert-x.github.com/vertx-mods/mods/" + module1
+            } else if (req.uri.equals("http://vert-x.github.io/vertx-mods/mods/" + module1
                 + "/mod.zip")) {
               req.response.sendFile(webroot + "mod1.zip");
             }

@@ -279,7 +279,7 @@ public class Starter {
 "                               will be deployed. Defaults to 1                 \n" +
 "        -repo <repo_host>      specifies the repository to use to install      \n" +
 "                               any modules.                                    \n" +
-"                               Default is vert-x.github.com/vertx-mods         \n" +
+"                               Default is vert-x.github.io/vertx-mods          \n" +
 "        -worker                if specified then the verticle is a worker      \n" +
 "                               verticle.                                       \n" +
 "        -includes <mod_list>   optional comma separated list of modules        \n" +
@@ -307,7 +307,7 @@ public class Starter {
 "                               will be deployed. Defaults to 1                 \n" +
 "        -repo <repo_host>      specifies the repository to use to get the      \n" +
 "                               module from if it is not already installed.     \n" +
-"                               Default is vert-x.github.com/vertx-mods         \n" +
+"                               Default is vert-x.github.io/vertx-mods          \n" +
 "        -cluster               if specified then the vert.x instance will form \n" +
 "                               a cluster with any other vert.x instances on    \n" +
 "                               the network.                                    \n" +
@@ -324,7 +324,7 @@ public class Starter {
 "    valid options are:\n" +
 "        -repo <repo_host>      specifies the repository to use to get the      \n" +
 "                               module from if it is not already installed.     \n" +
-"                               Default is vert-x.github.com/vertx-mods       \n\n" +
+"                               Default is vert-x.github.io/vertx-mods        \n\n" +
 
 "    vertx uninstall <modname>                                                  \n" +
 "        attempts to uninstall a module from a remote repository.               \n" +
