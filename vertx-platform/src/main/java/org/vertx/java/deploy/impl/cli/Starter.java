@@ -29,9 +29,12 @@ import org.vertx.java.deploy.impl.VerticleManager;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.*;
 import java.util.Enumeration;
 import java.util.Scanner;
+import java.util.Properties;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
@@ -45,8 +48,6 @@ public class Starter {
 
   private static final String CP_SEPARATOR = System.getProperty("path.separator");
 
-  private static final String VERSION = "vert.x-1.3.1.final";
-
   public static void main(String[] args) {
     new Starter(args);
   }
@@ -55,13 +56,31 @@ public class Starter {
   private VerticleManager mgr;
 
   private Starter(String[] sargs) {
+    final String version;
+    
+    // read version from Maven pom
+    Properties prop = new Properties();
+    InputStream is = getClass().getResourceAsStream("/META-INF/maven/com.autosportlabs/vertx-platform/pom.properties");
+    try {
+      prop.load(is);
+      version = "vert.x-" + prop.getProperty("version");
+    } catch (Exception e) {
+      throw new RuntimeException("unable to read version from pom.properties", e);
+    } finally {
+      try {
+        is.close();
+      } catch (Exception e){
+        /*ignore*/
+      }
+    }
+    
     if (sargs.length < 1) {
       displaySyntax();
     } else {
       String command = sargs[0].toLowerCase();
       Args args = new Args(sargs);
       if ("version".equals(command)) {
-        log.info(VERSION);
+        log.info(version);
       } else {
         if (sargs.length < 2) {
           displaySyntax();
@@ -69,7 +88,7 @@ public class Starter {
           String operand = sargs[1];
           switch (command) {
             case "version":
-              log.info(VERSION);
+              log.info(version);
               break;
             case "run":
               runVerticle(false, operand, args);
