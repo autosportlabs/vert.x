@@ -95,6 +95,11 @@ var vertx = vertx || {};
   
     sockJSConn.onopen = function() {
       state = vertx.EventBus.OPEN;
+
+      // Send the first ping then send a ping every 5 seconds
+      sendPing();
+      setInterval(sendPing, 5000);
+
       if (that.onopen) {
         that.onopen();
       }
@@ -138,6 +143,10 @@ var vertx = vertx || {};
       }
     }
   
+    function sendPing() {
+      sockJSConn.send(JSON.stringify({ type: "ping" }));
+    }
+
     function sendOrPub(sendOrPub, address, message, replyHandler) {
       checkSpecified("address", 'string', address);
       checkSpecified("message", 'object', message);
