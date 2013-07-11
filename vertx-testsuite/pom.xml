@@ -6,12 +6,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.vert-x</groupId>
+        <groupId>com.autosportlabs</groupId>
         <artifactId>parent</artifactId>
         <version>1.3.2-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.vert-x</groupId>
+    <groupId>com.autosportlabs</groupId>
     <artifactId>vertx-testsuite</artifactId>
 
     <properties>
@@ -21,36 +21,36 @@
     <dependencies>
         <!-- == compile == -->
         <dependency>
-            <groupId>org.vert-x</groupId>
+            <groupId>com.autosportlabs</groupId>
             <artifactId>vertx-core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.vert-x</groupId>
+            <groupId>com.autosportlabs</groupId>
             <artifactId>vertx-platform</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.vert-x</groupId>
+            <groupId>com.autosportlabs</groupId>
             <artifactId>vertx-testframework</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <!-- == runtime == -->
         <dependency>
-            <groupId>org.vert-x</groupId>
+            <groupId>com.autosportlabs</groupId>
             <artifactId>vertx-lang-groovy</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.vert-x</groupId>
+            <groupId>com.autosportlabs</groupId>
             <artifactId>vertx-lang-java</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.vert-x</groupId>
+            <groupId>com.autosportlabs</groupId>
             <artifactId>vertx-lang-jruby</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
@@ -64,13 +64,13 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.vert-x</groupId>
+            <groupId>com.autosportlabs</groupId>
             <artifactId>vertx-lang-jython</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.vert-x</groupId>
+            <groupId>com.autosportlabs</groupId>
             <artifactId>vertx-lang-rhino</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
