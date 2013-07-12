@@ -4,5 +4,5 @@ jdk:
     - openjdk7
     - oraclejdk7
 
-install: mvn validate
+install: mvn -q validate
 script: mvn test
