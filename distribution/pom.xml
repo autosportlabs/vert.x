@@ -81,6 +81,7 @@
     </dependencies>
 
     <build>
+        <finalName>vertx-${project.version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -95,7 +96,6 @@
                             <goal>single</goal>
                         </goals>
                         <configuration>
-                            <finalName>vertx-${project.version}</finalName>
                             <descriptors>
                                 <descriptor>src/assemblies/bin.xml</descriptor>
                             </descriptors>
@@ -105,5 +105,49 @@
             </plugin>
         </plugins>
     </build>
+    
+    <profiles>
+        <profile>
+            <id>rpm</id>
+            <activation>
+                <file>
+                    <exists>/bin/rpm</exists>
+                </file>
+            </activation>
 
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>rpm-maven-plugin</artifactId>
+                        <version>2.1-alpha-3</version>
+
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>attached-rpm</goal>
+                                </goals>
+
+                                <configuration>
+                                    <group>default</group>
+                                    <name>vertx</name>
+
+                                    <mappings>
+                                        <mapping>
+                                            <directory>/usr/lib/vertx/vert.x-${project.version}</directory>
+                                            <sources>
+                                                <source>
+                                                    <location>${project.build.directory}/${project.build.finalName}-bin</location>
+                                                </source>
+                                            </sources>
+                                        </mapping>
+                                    </mappings>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
