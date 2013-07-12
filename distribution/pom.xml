@@ -134,13 +134,45 @@
 
                                     <mappings>
                                         <mapping>
-                                            <directory>/usr/lib/vertx/vert.x-${project.version}</directory>
+                                            <directory>/usr/lib/vertx/vert.x-${project.version}/bin</directory>
                                             <sources>
                                                 <source>
-                                                    <location>${project.build.directory}/${project.build.finalName}-bin</location>
+                                                    <location>${project.build.directory}/${project.build.finalName}-bin/bin</location>
                                                 </source>
                                             </sources>
                                         </mapping>
+                                        <mapping>
+                                            <directory>/usr/lib/vertx/vert.x-${project.version}/client</directory>
+                                            <sources>
+                                                <source>
+                                                    <location>${project.build.directory}/${project.build.finalName}-bin/client</location>
+                                                </source>
+                                            </sources>
+                                        </mapping>
+                                        <mapping>
+                                            <directory>/usr/lib/vertx/vert.x-${project.version}/conf</directory>
+                                            <sources>
+                                                <source>
+                                                    <location>${project.build.directory}/${project.build.finalName}-bin/conf</location>
+                                                </source>
+                                            </sources>
+                                        </mapping>
+                                        <mapping>
+                                            <directory>/usr/lib/vertx/vert.x-${project.version}/lib</directory>
+                                            <sources>
+                                                <source>
+                                                    <location>${project.build.directory}/${project.build.finalName}-bin/lib</location>
+                                                </source>
+                                            </sources>
+                                        </mapping>
+                                       <mapping>
+                                            <directory>/usr/bin</directory>
+                                            <sources>
+                                                <softlinkSource>
+                                                    <location>/usr/lib/vertx/vert.x-${project.version}/bin/vertx</location>
+                                                </softlinkSource>
+                                            </sources>
+                                       </mapping>
                                     </mappings>
                                 </configuration>
                             </execution>
