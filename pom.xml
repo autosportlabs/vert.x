@@ -47,6 +47,14 @@
     </properties>
 
     <build>
+        <extensions>
+            <extension>
+                <groupId>org.springframework.build</groupId>
+                <artifactId>aws-maven</artifactId>
+                <version>4.4.0.RELEASE</version>
+            </extension>
+        </extensions>
+
         <pluginManagement>
             <!--
                 putting these here allows for central management of plugin
