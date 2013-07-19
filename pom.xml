@@ -37,7 +37,7 @@
 
     <scm>
         <connection>scm:git:https://github.com/autosportlabs/vert.x.git</connection>
-        <developerConnection>scm:git:https://github.com/autosportlabs/vert.x.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:autosportlabs/vert.x.git</developerConnection>
         <url>https://github.com/autosportlabs/vert.x</url>
     </scm>
 
