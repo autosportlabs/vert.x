@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>com.autosportlabs.vert-x</groupId>
         <artifactId>parent</artifactId>
-        <version>1.3.2-SNAPSHOT</version>
+        <version>1.3.2</version>
         <relativePath>../..</relativePath>
     </parent>
 
@@ -93,9 +91,7 @@
 
                             -->
                             <target name="install.yardoc">
-                                <taskdef resource="net/sf/antcontrib/antcontrib.properties"
-                                         classpathref="maven.plugin.classpath"
-                                />
+                                <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpathref="maven.plugin.classpath" />
 
                                 <if>
                                     <not>
@@ -165,16 +161,9 @@
                                     <arg value="src/main/ruby_scripts/**/*.rb" />
                                 </java>
 
-                                <zip destfile="${dest-jar}"
-                                     basedir="${dest-path}"
-                                     includes="**/*"
-                                />
+                                <zip destfile="${dest-jar}" basedir="${dest-path}" includes="**/*" />
 
-                                <attachartifact
-                                    file="${dest-jar}"
-                                    classifier="yardoc"
-                                    type="jar"
-                                />
+                                <attachartifact file="${dest-jar}" classifier="yardoc" type="jar" />
                             </target>
                         </configuration>
                     </execution>

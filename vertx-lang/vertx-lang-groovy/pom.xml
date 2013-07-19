@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>com.autosportlabs.vert-x</groupId>
         <artifactId>parent</artifactId>
-        <version>1.3.2-SNAPSHOT</version>
+        <version>1.3.2</version>
         <relativePath>../..</relativePath>
     </parent>
 
@@ -81,30 +79,13 @@
                                 <property name="dest-path" value="${project.build.directory}/groovydoc" />
                                 <property name="dest-jar" value="${project.build.directory}/groovydoc.jar" />
 
-                                <taskdef 
-                                    name="groovydoc"
-                                     classname="org.codehaus.groovy.ant.Groovydoc"
-                                     classpathref="maven.compile.classpath"
-                                />
+                                <taskdef name="groovydoc" classname="org.codehaus.groovy.ant.Groovydoc" classpathref="maven.compile.classpath" />
 
-                                <groovydoc
-                                    destdir="${dest-path}"
-                                    sourcepath="${basedir}/src/main/groovy"
-                                    use="true"
-                                    windowtitle="${project.name}"
-                                    doctitle="${project.name}"
-                                />
+                                <groovydoc destdir="${dest-path}" sourcepath="${basedir}/src/main/groovy" use="true" windowtitle="${project.name}" doctitle="${project.name}" />
 
-                                <zip destfile="${dest-jar}"
-                                     basedir="${dest-path}"
-                                     includes="**/*"
-                                />
+                                <zip destfile="${dest-jar}" basedir="${dest-path}" includes="**/*" />
 
-                                <attachartifact
-                                    file="${dest-jar}"
-                                    classifier="groovydoc"
-                                    type="jar"
-                                />
+                                <attachartifact file="${dest-jar}" classifier="groovydoc" type="jar" />
                             </target>
                         </configuration>
                     </execution>
