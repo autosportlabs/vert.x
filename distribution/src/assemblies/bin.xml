@@ -30,7 +30,7 @@
             <outputDirectory>api-docs/java/api</outputDirectory>
             <unpack>true</unpack>
             <includes>
-                <include>com.autosportlabs:vertx-core:jar:javadoc</include>
+                <include>com.autosportlabs.vert-x:core:jar:javadoc</include>
             </includes>
             <useProjectArtifact>false</useProjectArtifact>
         </dependencySet>
@@ -39,7 +39,7 @@
             <outputDirectory>api-docs/groovy/api</outputDirectory>
             <unpack>true</unpack>
             <includes>
-                <include>com.autosportlabs:vertx-lang-groovy:jar:groovydoc</include>
+                <include>com.autosportlabs.vert-x:lang-groovy:jar:groovydoc</include>
             </includes>
             <useProjectArtifact>false</useProjectArtifact>
         </dependencySet>
@@ -48,7 +48,7 @@
             <outputDirectory>api-docs/ruby/api</outputDirectory>
             <unpack>true</unpack>
             <includes>
-                <include>com.autosportlabs:vertx-lang-jruby:jar:yardoc</include>
+                <include>com.autosportlabs.vert-x:lang-jruby:jar:yardoc</include>
             </includes>
             <useProjectArtifact>false</useProjectArtifact>
         </dependencySet>
@@ -57,7 +57,7 @@
             <outputDirectory>api-docs/python</outputDirectory>
             <unpack>true</unpack>
             <includes>
-                <include>com.autosportlabs:vertx-lang-jython:jar:pydoc</include>
+                <include>com.autosportlabs.vert-x:lang-jython:jar:pydoc</include>
             </includes>
             <useProjectArtifact>false</useProjectArtifact>
         </dependencySet>

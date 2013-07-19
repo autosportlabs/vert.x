@@ -6,13 +6,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.autosportlabs</groupId>
+        <groupId>com.autosportlabs.vert-x</groupId>
         <artifactId>parent</artifactId>
         <version>1.3.2-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.autosportlabs</groupId>
-    <artifactId>vertx-core</artifactId>
+    <groupId>com.autosportlabs.vert-x</groupId>
+    <artifactId>core</artifactId>
 
     <dependencies>
         <!-- == compile == -->

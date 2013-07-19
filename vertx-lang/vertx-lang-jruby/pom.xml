@@ -6,14 +6,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.autosportlabs</groupId>
+        <groupId>com.autosportlabs.vert-x</groupId>
         <artifactId>parent</artifactId>
         <version>1.3.2-SNAPSHOT</version>
         <relativePath>../..</relativePath>
     </parent>
 
-    <groupId>com.autosportlabs</groupId>
-    <artifactId>vertx-lang-jruby</artifactId>
+    <groupId>com.autosportlabs.vert-x</groupId>
+    <artifactId>lang-jruby</artifactId>
 
     <properties>
         <jruby.lib>${project.build.directory}/jruby-lib</jruby.lib>
@@ -22,13 +22,13 @@
     <dependencies>
         <!-- == compile == -->
         <dependency>
-            <groupId>com.autosportlabs</groupId>
-            <artifactId>vertx-core</artifactId>
+            <groupId>com.autosportlabs.vert-x</groupId>
+            <artifactId>core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.autosportlabs</groupId>
-            <artifactId>vertx-platform</artifactId>
+            <groupId>com.autosportlabs.vert-x</groupId>
+            <artifactId>platform</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
