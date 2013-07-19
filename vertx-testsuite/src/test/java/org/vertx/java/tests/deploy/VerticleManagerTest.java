@@ -61,9 +61,9 @@ public class VerticleManagerTest {
 
   @Test
   public void testDoInstallModuleWithProxy() throws Exception {
-    System.getProperties().setProperty(HTTP_PROXY_HOST_PROP_NAME,
-        "localhost");
+    System.getProperties().setProperty(HTTP_PROXY_HOST_PROP_NAME, "localhost");
     System.getProperties().setProperty(HTTP_PROXY_PORT_PROP_NAME, "9093");
+    
     verticleManager = new VerticleManager(vertxInternal);
     verticleManager.installMod(TEST_MODULE1);
     assertTrue(new File("mods/" + TEST_MODULE1 + "/mod.json").exists());

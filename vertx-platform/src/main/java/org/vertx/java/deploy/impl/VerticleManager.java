@@ -59,7 +59,7 @@ public class VerticleManager implements ModuleReloader {
 
   private static final Logger log = LoggerFactory.getLogger(VerticleManager.class);
   private static final String REPO_URI_ROOT = "/vertx-mods/mods/";
-  private static final String DEFAULT_REPO_HOST = "vert-x.github.io";
+  private static final String DEFAULT_REPO_HOST = "vertx.io";
   private static final int BUFFER_SIZE = 4096;
   private static final String HTTP_PROXY_HOST_PROP_NAME = "http.proxyHost";
   private static final String HTTP_PROXY_PORT_PROP_NAME = "http.proxyPort";
@@ -539,8 +539,7 @@ public class VerticleManager implements ModuleReloader {
       }
     });
     String uri = REPO_URI_ROOT + moduleName + "/mod.zip";
-    String msg = "Attempting to install module " + moduleName + " from http://"
-        + repoHost + ":" + repoPort + uri;
+    String msg = "Attempting to install module " + moduleName + " from http://" + repoHost + ":" + repoPort + uri;
     if (proxyHost != null) {
       msg += " Using proxy host " + proxyHost + ":" + proxyPort;
     }

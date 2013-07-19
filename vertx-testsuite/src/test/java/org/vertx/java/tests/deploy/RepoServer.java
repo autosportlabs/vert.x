@@ -14,11 +14,10 @@ public class RepoServer {
         .requestHandler(new Handler<HttpServerRequest>() {
           public void handle(final HttpServerRequest req) {
             System.out.println("HANDLING " + req.uri);
-            if (req.uri.equals("/vertx-mods/mods/" + module2
-                + "/mod.zip")) {
+            if (req.uri.equals("/vertx-mods/mods/" + module2 + "/mod.zip")) {
               System.out.println("HANDLING repo request");
               req.response.sendFile(webroot + "mod2.zip");
-            } else if (req.uri.equals("http://vert-x.github.io/vertx-mods/mods/" + module1
+            } else if (req.uri.equals("http://vertx.io/vertx-mods/mods/" + module1
                 + "/mod.zip")) {
               req.response.sendFile(webroot + "mod1.zip");
             }
