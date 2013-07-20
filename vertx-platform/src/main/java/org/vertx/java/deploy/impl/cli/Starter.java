@@ -60,7 +60,7 @@ public class Starter {
     
     // read version from Maven pom
     Properties prop = new Properties();
-    InputStream is = getClass().getResourceAsStream("/META-INF/maven/com.autosportlabs/vertx-platform/pom.properties");
+    InputStream is = getClass().getResourceAsStream("/META-INF/maven/com.autosportlabs.vert-x/platform/pom.properties");
     try {
       prop.load(is);
       version = "vert.x-" + prop.getProperty("version");
